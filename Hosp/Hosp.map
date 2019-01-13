@@ -1,0 +1,401 @@
+Archive member included because of file (symbol)
+
+/usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+                              main.o (ulk_fpga_7seg_led_enable)
+/usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+                              main.o (ulk_fpga_clcd_init)
+/usr/lib/libulk.a(ulk_proc_gpmc.o)
+                              /usr/lib/libulk.a(ulk_fpga_7seg_led.o) (ulk_proc_gpmc_init)
+/usr/lib/libulk.a(ulk_proc_io.o)
+                              main.o (ulk_cpanel_printf)
+/usr/lib/libulk.a(ulk_proc_mcspi.o)
+                              main.o (ulk_proc_touch_spi_enable)
+/usr/lib/libulk.a(ulk_proc_timer.o)
+                              main.o (ulk_proc_delay)
+/usr/lib/libulk.a(ulk_proc_gpio.o)
+                              /usr/lib/libulk.a(ulk_proc_mcspi.o) (ulk_proc_gpio_set_dir)
+/usr/lib/libulk.a(ulk_proc_intr.o)
+                              /usr/lib/libulk.a(ulk_proc_timer.o) (irq_installer)
+/ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+                              /usr/lib/libulk.a(ulk_proc_io.o) (__aeabi_uidiv)
+/ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+                              /usr/lib/libulk.a(ulk_proc_mcspi.o) (__aeabi_fsub)
+/ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+                              /usr/lib/libulk.a(ulk_proc_mcspi.o) (__aeabi_fdiv)
+/ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+                              /usr/lib/libulk.a(ulk_proc_mcspi.o) (__aeabi_f2uiz)
+/ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                              /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o) (__div0)
+
+Allocating common symbols
+Common symbol       size              file
+
+params_final        0x8               /usr/lib/libulk.a(ulk_proc_mcspi.o)
+received_scanf_string
+                    0x64              /usr/lib/libulk.a(ulk_proc_io.o)
+receive_buffer      0x7d0             /usr/lib/libulk.a(ulk_proc_io.o)
+pixel               0x8               /usr/lib/libulk.a(ulk_proc_mcspi.o)
+buffer              0x8e              /usr/lib/libulk.a(ulk_proc_io.o)
+x_pixel             0x4               /usr/lib/libulk.a(ulk_proc_mcspi.o)
+y_pixel             0x4               /usr/lib/libulk.a(ulk_proc_mcspi.o)
+read_params         0xf8              /usr/lib/libulk.a(ulk_proc_mcspi.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x82000000         0x0004b000
+usrstack         0x82007800         0x00032000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD main.o
+
+.text           0x82000000     0x7560
+                0x82000000                . = 0x0
+                0x82000000                __text_start = .
+ *.o(entry)
+ entry          0x82000000      0xac8 main.o
+                0x82000000                main
+ *.o(.text)
+ .text          0x82000ac8        0x4 main.o
+                0x82000ac8                raise
+ .text          0x82000acc       0xb0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+                0x82000b4c                ulk_fpga_7seg_led_write
+                0x82000afc                ulk_fpga_7seg_led_disable
+                0x82000acc                ulk_fpga_7seg_led_enable
+ .text          0x82000b7c      0x798 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+                0x82000be0                ulk_fpga_gpmc_read_version
+                0x82000ddc                ulk_fpga_clcd_cursor_home
+                0x82000b7c                ulk_fpga_clcd_init
+                0x82000e7c                ulk_fpga_clcd_shift_right
+                0x82000cf8                ulk_fpga_clcd_poll_busy_flag
+                0x82000e0c                ulk_fpga_clcd_shift_left
+                0x820010ec                ulk_fpga_clcd_display_string
+                0x82000c38                ulk_fpga_clcd_hw_init
+                0x82000d4c                ulk_fpga_clcd_display_on
+                0x82000d7c                ulk_fpga_clcd_display_off
+                0x82000eec                ulk_fpga_clcd_row_swap
+                0x82000dac                ulk_fpga_clcd_display_clear
+ .text          0x82001314      0x14c /usr/lib/libulk.a(ulk_proc_gpmc.o)
+                0x82001314                ulk_proc_gpmc_init
+                0x82001328                ulk_proc_gpmc_config
+ .text          0x82001460     0x28fc /usr/lib/libulk.a(ulk_proc_io.o)
+                0x82001460                ulk_memset
+                0x82001600                ulk_printf
+                0x82002e14                ulk_strlen
+                0x82001594                memcpy
+                0x82001710                ulk_serial_puts
+                0x82002094                ulk_strnlen
+                0x82002008                skip_atoi
+                0x82003678                ulk_strcpy
+                0x8200211c                number
+                0x820035c0                diag_toupper
+                0x82001764                ulk_vsprintf
+                0x82002ff0                ulk_scanf_hex
+                0x820036c0                process_received_data
+                0x82001528                ulk_memcpy
+                0x8200262c                ulk_cpanel_printf
+                0x820014c4                memset
+                0x82003450                string_to_hex
+                0x8200334c                eth_rx
+                0x820028f8                create_udp_packet
+                0x8200166c                ulk_diag_putchar
+                0x82003624                diag_islower
+                0x82003980                ulk_scanf_string
+                0x82002e7c                eth_send
+                0x820016e4                ulk_puts
+                0x820025dc                ulk_sprintf
+ .text          0x82003d5c      0xc3c /usr/lib/libulk.a(ulk_proc_mcspi.o)
+                0x82003f60                ulk_proc_mcspi_config
+                0x82003d5c                ulk_proc_spi_init
+                0x82003e30                ulk_proc_touch_spi_enable
+                0x82003fe8                ulk_proc_touchscreen_get_coord
+                0x8200476c                ulk_proc_mcspi_touchscreen_command_send
+                0x82003ed8                ulk_proc_touch_spi_poll
+                0x82003dd8                ulk_proc_mcspi_reset
+                0x82004974                ulk_proc_spi_deinit
+                0x82003f48                ulk_proc_touch_spi_disable
+ .text          0x82004998      0x834 /usr/lib/libulk.a(ulk_proc_timer.o)
+                0x82005034                ulk_proc_timeout_nb
+                0x82004d30                ulk_proc_timer_start
+                0x82004ea8                ulk_proc_timer_reset
+                0x82004ab8                ulk_proc_timer_init
+                0x82004e08                ulk_proc_timer_stop
+                0x82004ca0                ulk_proc_timer_config
+                0x82004f50                ulk_proc_delay
+                0x82004998                ulk_proc_timer_isr
+ .text          0x820051cc     0x1680 /usr/lib/libulk.a(ulk_proc_gpio.o)
+                0x82005500                ulk_proc_gpio_get_data_in
+                0x82006278                ulk_proc_sys_pad_set_mux_mode
+                0x820057ac                ulk_proc_gpio_enable_debounce
+                0x82005dd0                ulk_proc_gpio_irq_clear_iva
+                0x82006674                ulk_proc_sys_pad_get_dir
+                0x820059f8                ulk_proc_gpio_irq_enable_mpu
+                0x82006338                ulk_proc_sys_pad_get_mux_mode
+                0x82005c18                ulk_proc_gpio_irq_clear_mpu
+                0x82005350                ulk_proc_gpio_set_dir
+                0x82006080                ulk_proc_gpio_irq_trig_edge_r
+                0x820065b4                ulk_proc_sys_pad_set_dir
+                0x820067c0                ulk_proc_sys_pad_get_wakeup
+                0x820051cc                ulk_proc_gpio_init
+                0x82005cd0                ulk_proc_gpio_irq_enable_iva
+                0x8200617c                ulk_proc_gpio_irq_trig_edge_f
+                0x82005f84                ulk_proc_gpio_irq_trig_level_1
+                0x820063c0                ulk_proc_sys_pad_set_pull
+                0x820064d4                ulk_proc_sys_pad_get_pull
+                0x820058a8                ulk_proc_gpio_get_debounce_time
+                0x8200544c                ulk_proc_gpio_get_dir
+                0x820056b0                ulk_proc_gpio_enable_wakeup
+                0x8200525c                ulk_proc_gpio_reset
+                0x82005938                ulk_proc_gpio_set_debounce_time
+                0x82006700                ulk_proc_sys_pad_set_wakeup
+                0x820055b4                ulk_proc_gpio_set_data_out
+                0x82005e88                ulk_proc_gpio_irq_trig_level_0
+ .text          0x8200684c      0x16c /usr/lib/libulk.a(ulk_proc_intr.o)
+                0x8200684c                swi_installer
+                0x82006938                fiq_installer
+                0x820068b8                irq_installer
+ .text          0x820069b8      0x208 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+                0x820069b8                __udivsi3
+                0x820069b8                __aeabi_uidiv
+                0x82006ba8                __aeabi_uidivmod
+ .text          0x82006bc0      0x250 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+                0x82006bcc                __aeabi_fadd
+                0x82006bc8                __subsf3
+                0x82006d64                __aeabi_i2f
+                0x82006bc8                __aeabi_fsub
+                0x82006d94                __floatdisf
+                0x82006d64                __floatsisf
+                0x82006d84                __floatundisf
+                0x82006d5c                __aeabi_ui2f
+                0x82006d94                __aeabi_l2f
+                0x82006d84                __aeabi_ul2f
+                0x82006bc0                __aeabi_frsub
+                0x82006d5c                __floatunsisf
+                0x82006bcc                __addsf3
+ .text          0x82006e10      0x2f8 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+                0x82006fa8                __divsf3
+                0x82006fa8                __aeabi_fdiv
+                0x82006e10                __mulsf3
+                0x82006e10                __aeabi_fmul
+ .text          0x82007108       0x54 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+                0x82007108                __aeabi_f2uiz
+                0x82007108                __fixunssfsi
+ .text          0x8200715c       0x10 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                0x8200715c                __div0
+ *.o(.strings)
+ *.o(.rodata)
+ .rodata        0x8200716c       0x58 /usr/lib/libulk.a(ulk_proc_io.o)
+ .rodata        0x820071c4        0x4 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ *.o(.rodata.*)
+ .rodata.str1.4
+                0x820071c8      0x178 main.o
+ *.o(.comment)
+ .comment       0x82007340       0x37 main.o
+ .comment       0x82007377       0x37 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .comment       0x820073ae       0x37 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .comment       0x820073e5       0x37 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .comment       0x8200741c       0x37 /usr/lib/libulk.a(ulk_proc_io.o)
+ .comment       0x82007453       0x37 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .comment       0x8200748a       0x37 /usr/lib/libulk.a(ulk_proc_timer.o)
+ .comment       0x820074c1       0x37 /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .comment       0x820074f8       0x37 /usr/lib/libulk.a(ulk_proc_intr.o)
+ *.o(.debug*)
+ *fill*         0x8200752f        0x1 00
+ .debug_frame   0x82007530       0x28 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ *(.rodata.*)
+ *(.rodata)
+ *(.eh_frame)
+                0x82007560                . = ALIGN (0x20)
+ *fill*         0x82007558        0x8 00
+                0x82007560                __text_end = .
+
+.vfp11_veneer   0x00000000        0x0
+ .vfp11_veneer  0x00000000        0x0 main.o
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_io.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_timer.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .vfp11_veneer  0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_intr.o)
+ .vfp11_veneer  0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .vfp11_veneer  0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .vfp11_veneer  0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .vfp11_veneer  0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .vfp11_veneer  0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+
+.init           0x82007560      0x300
+                0x82007560                . = ALIGN (0x20)
+                0x82007560                __data_start = .
+                0x82007560                . = ALIGN (0x20)
+ *(.data)
+ .data          0x82007560       0x40 main.o
+                0x82007570                pwm_clk_base
+                0x82007560                pwm_base
+                0x82007590                pwm_clk_sel
+                0x82007580                pwm_clk
+ .data          0x820075a0        0x0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .data          0x820075a0        0x0 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .data          0x820075a0        0x0 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .data          0x820075a0        0x0 /usr/lib/libulk.a(ulk_proc_io.o)
+ .data          0x820075a0        0x0 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .data          0x820075a0      0x104 /usr/lib/libulk.a(ulk_proc_timer.o)
+                0x820075d4                timer_clk_base
+                0x820075a0                timer_base
+                0x82007670                timer_irq_num
+                0x8200763c                timer_clk_sel
+                0x82007608                timer_clk
+ .data          0x820076a4      0x1a8 /usr/lib/libulk.a(ulk_proc_gpio.o)
+                0x820076bc                gpio_control_pad_offset
+                0x820076a4                bank_base
+ .data          0x8200784c        0x4 /usr/lib/libulk.a(ulk_proc_intr.o)
+                0x8200784c                interrupt_array_pointer
+ .data          0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .data          0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .data          0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .data          0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .data          0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ *(.glue_7)
+ .glue_7        0x82007850        0x0 main.o
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_io.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_timer.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .glue_7        0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_intr.o)
+ .glue_7        0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .glue_7        0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .glue_7        0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .glue_7        0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .glue_7        0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ *(.glue_7t)
+ .glue_7t       0x82007850        0x0 main.o
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_io.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_timer.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .glue_7t       0x82007850        0x0 /usr/lib/libulk.a(ulk_proc_intr.o)
+ .glue_7t       0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .glue_7t       0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .glue_7t       0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .glue_7t       0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .glue_7t       0x82007850        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+                0x82007860                . = ALIGN (0x20)
+ *fill*         0x82007850       0x10 00
+                0x82007860                __data_end = .
+                0x82007860                . = ALIGN (0x20)
+
+.bss            0x82007860      0xaa0
+                0x82007860                __bss_start = .
+ *(.bss)
+ .bss           0x82007860        0x0 main.o
+ .bss           0x82007860        0x0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .bss           0x82007860        0x0 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .bss           0x82007860        0x0 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .bss           0x82007860        0x8 /usr/lib/libulk.a(ulk_proc_io.o)
+                0x82007864                rxpoll
+                0x82007860                a
+ .bss           0x82007868       0x18 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+                0x82007868                read_params_count
+ .bss           0x82007880       0xa0 /usr/lib/libulk.a(ulk_proc_timer.o)
+ .bss           0x82007920        0x0 /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .bss           0x82007920        0x0 /usr/lib/libulk.a(ulk_proc_intr.o)
+ .bss           0x82007920        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .bss           0x82007920        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x82007920        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .bss           0x82007920        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .bss           0x82007920        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+ *(COMMON)
+ COMMON         0x82007920      0x8ce /usr/lib/libulk.a(ulk_proc_io.o)
+                0x82007920                received_scanf_string
+                0x82007984                receive_buffer
+                0x82008160                buffer
+ *fill*         0x820081ee        0x2 00
+ COMMON         0x820081f0      0x110 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+                0x820081f0                params_final
+                0x820081f8                pixel
+                0x82008200                x_pixel
+                0x82008204                y_pixel
+                0x82008208                read_params
+                0x82008300                . = ALIGN (0x20)
+                0x82008300                __bss_end = .
+
+.stack          0x82007800        0x0
+                0x82007800                __stack_start = .
+ *(.stack)
+                0x82007800                __stack_end = .
+                0x82007800                . = ALIGN (0x20)
+LOAD /usr/lib/libulk.a
+LOAD /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a
+Address of section .text set to 0x82000000
+OUTPUT(Hosp.elf elf32-littlearm)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 main.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_io.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_timer.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/libulk.a(ulk_proc_intr.o)
+ .note.GNU-stack
+                0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
+
+.ARM.attributes
+                0x00000000       0x2a
+ .ARM.attributes
+                0x00000000       0x2a main.o
+ .ARM.attributes
+                0x0000002a       0x2a /usr/lib/libulk.a(ulk_fpga_7seg_led.o)
+ .ARM.attributes
+                0x00000054       0x2a /usr/lib/libulk.a(ulk_fpga_char_lcd.o)
+ .ARM.attributes
+                0x0000007e       0x2a /usr/lib/libulk.a(ulk_proc_gpmc.o)
+ .ARM.attributes
+                0x000000a8       0x2a /usr/lib/libulk.a(ulk_proc_io.o)
+ .ARM.attributes
+                0x000000d2       0x2a /usr/lib/libulk.a(ulk_proc_mcspi.o)
+ .ARM.attributes
+                0x000000fc       0x2a /usr/lib/libulk.a(ulk_proc_timer.o)
+ .ARM.attributes
+                0x00000126       0x2a /usr/lib/libulk.a(ulk_proc_gpio.o)
+ .ARM.attributes
+                0x00000150       0x2a /usr/lib/libulk.a(ulk_proc_intr.o)
+ .ARM.attributes
+                0x0000017a       0x14 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000018e       0x14 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000001a2       0x14 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000001b6       0x14 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x000001ca       0x14 /ulk/toolchain/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.2.1/libgcc.a(_dvmd_lnx.o)
